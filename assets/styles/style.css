@@ -1,10 +1,21 @@
-.button{
+* {
+    font-family: 'Bangers', cursive;
+};
+
+.button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+};
+
 body {
     background-image: url(../../images/images-pg-2/marvel-comic-books.jpg);
     background-size: cover;
-}
+};
+
+.media-content {
+    background-image: url(../../images/images-pg-2/card-background.jpg);
+    background-size: cover;
+};
+/* TODO: I may design a background for our app if time permits. */
