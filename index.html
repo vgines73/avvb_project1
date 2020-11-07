@@ -14,50 +14,31 @@
         <div class="card-header">
             <h1>Superhero Matchup</h1>
     </header>
-
-
-    <div class="container">
-        <div class="column">
-            <div class="column is-one-quarter">Recent Wins</div>
-
-
-        </div>
-    </div>
-    </div>
-
-    <body>
-        <section class="section">
-            <div class="container">
-                <h1 class="middle section"></h1>
-            </div>
-        </section>
-    </body>
-
-    <div class="columns is-mobile is-centered">
-        <div class="column is-half">
-            <p class="bd-notification is-primary"></p>
-            <div class="field">
-                <label class="label">Player 1</label>
-                <div class="control">
-                    <div class="select">
-                        <select>
-                            <option>Select dropdown</option>
-                            <option>Batman</option>
-                            <option>Superman</option>
-                            <option>Wonder Woman</option>
-                            <option>Spider Man</option>
-                        </select>
+    <section>
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <div class="column is-one-quarter">Recent Wins</div>
+                    <div class="fixed-right"></div>
+                </div>
+                <!-- dropdown 1 -->
+                <div class="field">
+                    <label class="label">Player 1</label>
+                    <div class="control">
+                        <div class="select">
+                            <select>
+                                <option>Select dropdown</option>
+                                <option>Batman</option>
+                                <option>Superman</option>
+                                <option>Wonder Woman</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <button id="versus" class="btn">vs.</button>
+                <!-- button -->
+                <button id="versus" class="btn">vs.</button>
 
-    <div class="columns is-mobile is-centered">
-        <div class="column is-half">
-            <p class="bd-notification is-primary"></p>
-            <div class="field">
+                <!-- dropdown 2 -->
                 <div class="field">
                     <label class="label">Player 2</label>
                     <div class="control">
@@ -67,12 +48,13 @@
                                 <option>Batman</option>
                                 <option>Superman</option>
                                 <option>Wonder Woman</option>
-                                <option>Spider Man</option>
                             </select>
                         </div>
                     </div>
                 </div>
-
+            </div>
+        </div>
+    </section>
 
                 <script src="./assets/scripts/index_script.js"></script>
 </body>
