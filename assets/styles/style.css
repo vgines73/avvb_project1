@@ -1,1 +1,19 @@
 /* TODO: I may design a background for our app if time permits. */
+
+/* Index Style Page  */
+.card-header {
+    text-align: center;
+    font-size: 50px;
+    padding: 20px;
+    padding-top: 0px;
+    color: blue;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: large;
+    padding: 20px;
+}
