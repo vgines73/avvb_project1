@@ -2,18 +2,13 @@
     font-family: 'Bangers', cursive;
 }
 
-/* Index Style Page  */
-.card-header {
-    text-align: center;
-    font-size: 50px;
-    padding: 20px;
-    padding-top: 0px;
-    color: blue;
+h1 {
+    letter-spacing: .5rem;
 }
-
-.button {
+#fight-button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
 }
+

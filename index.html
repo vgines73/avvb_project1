@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <title>Superhero Showdown</title>
 </head>
@@ -16,35 +18,81 @@
             <div class="card-content">
                 <div class="media">
                     <div class="media-content">
-                        <p class="title is-1 has-text-centered">Superhero Matchup</p>
-                        <p class="subtitle is-6 has-text-centered">Choose Your Superhero/Villian</p>
+                        <h1 class="title is-1 has-text-centered">Superhero Matchup</h1>
+                        <p class="subtitle is-6 has-text-centered">Choose Your Characters and See Who Would Win</p>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <br>
     <section>
         <div class="container">
             <div class="row">
-                <div class="columns">
-                    <div class="column is-one-fifths"></div>
-                    <div class="column is-two fifths">
-                        <div class="container">
-                            <section>
-                                <button id="go-back-button" class="button is-danger is-rounded">Fight!</button>
-                            </section>
-                            <div class="row">
-                                <div class="columns">
-                                    <div class="column"></div>
+                <section>
+                    <button id="fight-button" class="button is-danger is-rounded">Fight!</button>
+                </section>
+                <section class="columns">
+                    <article class="column is-one-fifths">
+                        <!-- for previous fights -->
+                    </article>
+                    <article class="column is-one fifths">
+                        <div class="dropdown is-active">
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
+                                    <span>Select Your Character</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <!-- list of characters goes here -->
+                                        <ul class="has-text-centered">
+                                            <li>Batman</li>
+                                            <li>Superman</li>
+                                            <li>Spider-Man</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="column is-one-fifths"></div>
-                </div>
+                    </article>
+                    <article class="column is-one-fifths"> <!-- empty div for spacing--> </article>
+                    <article class="column is-one-fifths">
+                        <div class="dropdown is-active">
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
+                                    <span>Select Your Character</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <!-- list of characters goes here-->
+                                        <ul class="has-text-centered">
+                                            <li>Batman</li>
+                                            <li>Superman</li>
+                                            <li>Spider-Man</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="column is-one-fifths"> <!-- empty div for spacing --> </article>
+                </section>
             </div>
         </div>
     </section>
+    <footer>
+
+    </footer>
     <script src="./assets/scripts/index_script.js"></script>
 </body>
 
