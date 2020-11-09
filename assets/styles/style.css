@@ -1,14 +1,14 @@
 * {
     font-family: 'Bangers', cursive;
+
 }
 
 h1 {
     letter-spacing: .5rem;
 }
-#fight-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-}
 
+.column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
