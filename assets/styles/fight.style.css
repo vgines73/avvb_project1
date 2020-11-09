@@ -25,6 +25,10 @@ h1 {
     width: 275px;
     height: 350px;
 }
+.winner {
+    padding-top: 10px;
+}
+
 /* .media-content {
     opacity: .85;
 

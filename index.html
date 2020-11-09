@@ -12,7 +12,7 @@
     <title>Superhero Showdown</title>
 </head>
 
-<body >
+<body>
     <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
@@ -30,11 +30,11 @@
 
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="">
                         Home
                     </a>
 
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="">
                         Biography
                     </a>
 
@@ -60,7 +60,8 @@
                         </div>
                     </div>
                 </div>
-
+            </div>
+        </nav>
     </header>
     <section class="card">
         <div class="card-content">
@@ -80,14 +81,14 @@
                     <article class="column is-one-fifths">
                         <!-- for previous fights -->
                         <div class="card">
-                            <div class="card-content">
+                            <div class="card-content recent-fights">
                                 <div class="media">
                                     <div class="media-content">
                                         <p class="title is-4 has-text-centered">Recent Fights</p>
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <ul id="recent-fights" class="list-group list-group-flush">
+                                    <ul id="previous-fights" class="list-group list-group-flush">
                                         <!-- Searched cities go here -->
                                         <li>Batman vs Superman</li>
                                     </ul>
@@ -98,7 +99,7 @@
                     <article class="column is-one fifths">
                         <div class="dropdown is-active">
                             <div class="dropdown-trigger">
-                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
+                                <button class="button button-select" aria-haspopup="true" aria-controls="dropdown-menu2">
                                     <span>Select Your Character</span>
                                     <span class="icon is-small">
                                         <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -120,13 +121,14 @@
                         </div>
                     </article>
                     <article class="column is-one-fifths">
-                        <!-- empty div for spacing-->
-                        <button id="fight-button" class="button is-danger"><p class="title is-1">Fight!</p></button>
+                        <button id="fight-button" class="button is-danger">
+                            <p class="title is-1">Fight!</p>
+                        </button>
                     </article>
                     <article class="column is-one-fifths">
                         <div class="dropdown is-active">
                             <div class="dropdown-trigger">
-                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
+                                <button class="button button-select" aria-haspopup="true" aria-controls="dropdown-menu2">
                                     <span>Select Your Character</span>
                                     <span class="icon is-small">
                                         <i class="fas fa-angle-down" aria-hidden="true"></i>

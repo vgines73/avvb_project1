@@ -4,11 +4,16 @@
 }
 
 h1 {
-    letter-spacing: .5rem;
+    letter-spacing: .3rem;
 }
 
 .column {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.navbar,
+.button-select,
+.recent-fights {
+    background-color: whitesmoke!important;
 }
