@@ -1,22 +1,19 @@
 * {
     font-family: 'Bangers', cursive;
+
 }
 
-/* Index Style Page  */
-.card-header {
-    text-align: center;
-    font-size: 50px;
-    padding: 20px;
-    padding-top: 0px;
-    color: blue;
+h1 {
+    letter-spacing: .3rem;
 }
 
-.btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    font-size: large;
-    padding: 20px;
-    background-color: red;
+.column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar,
+.button-select,
+.recent-fights {
+    background-color: whitesmoke!important;
 }

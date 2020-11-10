@@ -4,59 +4,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/styles/style.css">
     <title>Superhero Showdown</title>
 </head>
 
 <body>
     <header>
-        <div class="card-header">
-            <h1>Superhero Matchup</h1>
-    </header>
-    <section>
-        <div class="container">
-            <div class="columns">
-                <div class="column">
-                    <div class="column is-one-quarter">Recent Wins</div>
-                    <div class="fixed-right"></div>
-                </div>
-                <!-- dropdown 1 -->
-                <div class="field">
-                    <label class="label">Player 1</label>
-                    <div class="control">
-                        <div class="select">
-                            <select>
-                                <option>Select dropdown</option>
-                                <option>Batman</option>
-                                <option>Superman</option>
-                                <option>Wonder Woman</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <!-- button -->
-                <button id="versus" class="btn">vs.</button>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="">
+                    <h2 class="title is 5">AVVB</h2>
+                </a>
 
-                <!-- dropdown 2 -->
-                <div class="field">
-                    <label class="label">Player 2</label>
-                    <div class="control">
-                        <div class="select">
-                            <select>
-                                <option>Select dropdown</option>
-                                <option>Batman</option>
-                                <option>Superman</option>
-                                <option>Wonder Woman</option>
-                            </select>
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="">
+                        Powerstats
+                    </a>
+
+                    <a class="navbar-item" href="">
+                        Biography
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            More
+                        </a>
+                        <!-- if time permits maybe the other api references -->
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="">
+                                About
+                            </a>
+                            <a class="navbar-item">
+                                Jobs
+                            </a>
+                            <a class="navbar-item">
+                                Contact
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item">
+                                Report an issue
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </nav>
+    </header>
+    <section class="card">
+        <div class="card-content">
+            <div class="media">
+                <div class="media-content">
+                    <h1 class="title is-1 has-text-centered">Superhero Matchup</h1>
+                    <p class="subtitle is-6 has-text-centered">Choose Your Characters and See Who Would Win</p>
+                </div>
+            </div>
         </div>
     </section>
+    <br>
+    <section>
+        <div class="container">
+            <div class="row">
+                <section class="columns">
+                    <article class="column is-one-fifths">
+                        <!-- for previous fights -->
+                        <div class="card">
+                            <div class="card-content recent-fights">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-4 has-text-centered">Recent Fights</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <ul id="previous-fights" class="list-group list-group-flush">
+                                        <!-- Searched cities go here -->
+                                        <li>Batman vs Superman</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="column is-one fifths">
+                        <div class="dropdown is-active">
+                            <div class="dropdown-trigger">
+                                <button class="button button-select" aria-haspopup="true" aria-controls="dropdown-menu2">
+                                    <span>Select Your Character</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <!-- list of characters goes here -->
+                                        <ul class="has-text-centered">
+                                            <li>Batman</li>
+                                            <li>Superman</li>
+                                            <li>Spider-Man</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="column is-one-fifths">
+                        <button id="fight-button" class="button is-danger">
+                            <p class="title is-1">Fight!</p>
+                        </button>
+                    </article>
+                    <article class="column is-one-fifths">
+                        <div class="dropdown is-active">
+                            <div class="dropdown-trigger">
+                                <button class="button button-select" aria-haspopup="true" aria-controls="dropdown-menu2">
+                                    <span>Select Your Character</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <!-- list of characters goes here-->
+                                        <ul class="has-text-centered">
+                                            <li>Batman</li>
+                                            <li>Superman</li>
+                                            <li>Spider-Man</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="column is-one-fifths">
+                        <!-- empty div for spacing -->
+                    </article>
+                </section>
+            </div>
+        </div>
+    </section>
+    <footer>
 
-                <script src="./assets/scripts/index_script.js"></script>
+    </footer>
+    <script src="./assets/scripts/index_script.js"></script>
 </body>
 
 </html>
