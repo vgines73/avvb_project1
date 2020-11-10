@@ -15,6 +15,7 @@ h1 {
     color: black!important;
 }
 
+.button-center,
 .column {
     display: flex;
     justify-content: center;
@@ -25,13 +26,9 @@ h1 {
     width: 275px;
     height: 350px;
 }
-.winner {
-    padding-top: 10px;
+
+.winner-card {
+    background-color: whitesmoke!important;
 }
-
-/* .media-content {
-    opacity: .85;
-
-} */
 
 /* TODO: I may design a background for our app if time permits. */
