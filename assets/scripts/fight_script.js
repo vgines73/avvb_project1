@@ -13,24 +13,31 @@ function determineFighter(fighterId) {
     return superUrl;
 }
 
-function getApi(chosenUrl) {
+function getApi(i, chosenUrl) {
     return fetch(chosenUrl)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
             console.log(data);
-            loadCharts(data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength);
+            loadCharts(i,data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength);
         })
         .catch(function(err){
             console.log(err);
         });
 }
 
-function loadCharts(combat,durability,intelligence,power,speed,strength) {
+function loadCharts(i,combat,durability,intelligence,power,speed,strength) {
     let popChart = document.createElement("img")
     popChart.setAttribute("src", `https://image-charts.com/chart?cht=bvg&chd=t:${combat},${durability},${intelligence},${power},${speed},${strength}&chbr=10&chxt=x&chs=500x300&chl=${combat}|${durability}|${intelligence}|${power}|${speed}|${strength}&chxl=0:|Combat|Durability|Intelligence|Power|Speed|Strength`)
-    barChart1.append(popChart)
+    function addChart(chartNum) {
+        if (chartNum === 1) {
+            barChart1.append(popChart)
+        } else {
+            barChart2.append(popChart)
+        }
+    }
+    addChart(i);
     // Chart type: cht=<type_code> <-- bvg is the bar graph type.
     // Chart data: chd=t:<data>,<data> etc. <-- Actually modifies the chart's visuals to match the numeric data.
     // Chart size: chs=<chart_size>x</chart_size>
@@ -41,10 +48,12 @@ function loadCharts(combat,durability,intelligence,power,speed,strength) {
     // Chart XL: chxl=0:|<parameter>|<parameter>| etc. <-- provides a title under the chart for the data.
 }
 
-for (let i = 1; i < 3; i++) {
-    getApi(fullUrl(i))
+function loadFight(fighter1, fighter2) {
+    getApi(1,fullUrl(fighter1))
+    getApi(2,fullUrl(fighter2))
 }
 
+loadFight(289, 41)
 
-
+// TODO: Unfortunately, some Heroes don't have stats. Will need to write some kind of response.
 // TODO: local storage save matchup and who won on match up
