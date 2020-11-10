@@ -20,16 +20,16 @@ function getApi(chosenUrl) {
         })
         .then(function (data) {
             console.log(data);
-            loadCharts(1,2);
+            loadCharts(data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength);
         })
         .catch(function(err){
             console.log(err);
         });
 }
 
-function loadCharts(fighter1, fighter2) {
+function loadCharts(combat,durability,intelligence,power,speed,strength) {
     let popChart = document.createElement("img")
-    popChart.setAttribute("src", "https://image-charts.com/chart?cht=bvg&chd=t:5,4,3,7,7,10&chbr=10&chxt=x&chs=500x300&chl=5|4|3|7|7|10&chxl=0:|Combat|Durability|Intelligence|Power|Speed|Strength")
+    popChart.setAttribute("src", `https://image-charts.com/chart?cht=bvg&chd=t:${combat},${durability},${intelligence},${power},${speed},${strength}&chbr=10&chxt=x&chs=500x300&chl=${combat}|${durability}|${intelligence}|${power}|${speed}|${strength}&chxl=0:|Combat|Durability|Intelligence|Power|Speed|Strength`)
     barChart1.append(popChart)
     // Chart type: cht=<type_code> <-- bvg is the bar graph type.
     // Chart data: chd=t:<data>,<data> etc. <-- Actually modifies the chart's visuals to match the numeric data.
