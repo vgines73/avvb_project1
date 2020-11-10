@@ -14,32 +14,24 @@ function determineFighter(fighterId) {
 }
 
 function getApi(chosenUrl) {
-    fetch(chosenUrl)
+    return fetch(chosenUrl)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
             console.log(data);
+            loadCharts(1,2);
         })
         .catch(function(err){
             console.log(err);
         });
 }
 
-// pullFighters(getApi(fullUrl(1)));
-// This is where the info from the index.html will be brought in. Via local storage I guess.
-
-// Break HERE
-
 function loadCharts(fighter1, fighter2) {
     let popChart = document.createElement("img")
-    for (let i = 1; i < 2; i++) {
-        let stats = getApi(fullUrl(i));
-        console.log(stats);
-        popChart.setAttribute("src", "https://image-charts.com/chart?cht=bvg&chd=t:5,4,3,7,7,10&chbr=10&chxt=x&chs=500x300&chl=5|4|3|7|7|10&chxl=0:|Combat|Durability|Intelligence|Power|Speed|Strength")
-        barChart1.append(popChart)
-    }
-    // Chart type: cht=<type_code>
+    popChart.setAttribute("src", "https://image-charts.com/chart?cht=bvg&chd=t:5,4,3,7,7,10&chbr=10&chxt=x&chs=500x300&chl=5|4|3|7|7|10&chxl=0:|Combat|Durability|Intelligence|Power|Speed|Strength")
+    barChart1.append(popChart)
+    // Chart type: cht=<type_code> <-- bvg is the bar graph type.
     // Chart data: chd=t:<data>,<data> etc. <-- Actually modifies the chart's visuals to match the numeric data.
     // Chart size: chs=<chart_size>x</chart_size>
     // Chart List: chl=<data>|<data>|<data> etc. <-- Adds the numeric ontop of its respective visual.
@@ -49,7 +41,10 @@ function loadCharts(fighter1, fighter2) {
     // Chart XL: chxl=0:|<parameter>|<parameter>| etc. <-- provides a title under the chart for the data.
 }
 
-loadCharts(1, 2)
+for (let i = 1; i < 3; i++) {
+    getApi(fullUrl(i))
+}
+
 
 
 // TODO: local storage save matchup and who won on match up
