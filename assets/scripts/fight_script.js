@@ -23,14 +23,18 @@ function getApi(i, chosenUrl) {
         })
         .then(function (data) {
             console.log(data);
-            loadCharts(i,data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength);
+            fighterData(i,data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength,data.name);
         })
         .catch(function(err){
             console.log(err);
         });
 }
 
-function loadCharts(i,combat,durability,intelligence,power,speed,strength) {
+function fighterData(i,combat,durability,intelligence,power,speed,strength,name) {
+    createChart(i,combat,durability,intelligence,power,speed,strength);
+}
+
+function createChart(i,combat,durability,intelligence,power,speed,strength){
     let popChart = document.createElement("img")
     popChart.setAttribute("src", `https://image-charts.com/chart?cht=bvg&chd=t:${combat},${durability},${intelligence},${power},${speed},${strength}&chbr=10&chxt=x&chs=500x300&chl=${combat}|${durability}|${intelligence}|${power}|${speed}|${strength}&chxl=0:|Combat|Durability|Intelligence|Power|Speed|Strength`)
     addChart(i, popChart);
@@ -46,9 +50,9 @@ function loadCharts(i,combat,durability,intelligence,power,speed,strength) {
 
 function addChart(chartNum, source) {
     if (chartNum === 1) {
-        barChart1.append(source)
+        barChart1.append(source);
     } else {
-        barChart2.append(source)
+        barChart2.append(source);
     }
 }
 
