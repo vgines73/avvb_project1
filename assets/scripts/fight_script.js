@@ -34,3 +34,8 @@ barChart.append(popChart)
 
 
 // local storage save matchup and who won on match up
+
+goBackButton = document.querySelector("#go-back-button");
+function goBack() {
+    window.location.href="" // live site goes here.
+}
