@@ -510,6 +510,7 @@ let heroList = [
 for (let i = 0; i < heroList.length; i++) {
     console.log(heroList[i][1]);
     selectHeroOne();
+    selectHeroTwo();
 
 }
 

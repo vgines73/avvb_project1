@@ -110,7 +110,7 @@ loadFight(289, 41)
 // WISHLIST: Use ftAry so that it is an array through all its child functions.
 // local storage save matchup and who won on match up
 
-goBackButton = document.querySelector("#go-back-button");
+document.getElementById("go-back-button").addEventListener("click", goBack)
 function goBack() {
-    window.location.href="" // live site goes here.
+    window.location.href="index.html"
 }

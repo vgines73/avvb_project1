@@ -18,8 +18,24 @@ getApi(requestUrl);
 
 function selectHeroOne() {
     let optionOne = document.querySelector("#option-one");
-    let option = document.createElement("option")
-    option.append(heroList[1][1]);
-    optionOne.append(option);
+    let firstPick = document.createElement("option")
+    firstPick.append(heroList[1][1]);
+    optionOne.append(firstPick);
     console.log(optionOne);
+}
+
+function selectHeroTwo() {
+    let optionTwo = document.querySelector("#option-two");
+    let secondPick = document.createElement("option")
+    secondPick.append(heroList[1][1]);
+    optionTwo.append(secondPick)
+    console.log(optionTwo)
+}
+
+
+// fight button function
+
+document.getElementById("fight-button").addEventListener("click", fight)
+function fight() {
+    window.location.href="fight.html" 
 }
