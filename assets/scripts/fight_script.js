@@ -31,7 +31,16 @@ function getApi(i, chosenUrl) {
 }
 
 function fighterData(i,combat,durability,intelligence,power,speed,strength,name) {
+    fighterName(i,name);
     createChart(i,combat,durability,intelligence,power,speed,strength);
+}
+
+function fighterName(index, name){
+    if (index === 1) {
+        nameFighter1.textContent = name;
+    } else {
+        nameFighter2.textContent = name;
+    }
 }
 
 function createChart(i,combat,durability,intelligence,power,speed,strength){
@@ -58,7 +67,6 @@ function addChart(chartNum, source) {
 
 loadFight(289, 41)
 
-// TODO: The names of the fighters to dynamically update.
 // TODO: Unfortunately, some Heroes don't have stats. Will need to write some kind of response.
 // TODO: Calculate who has the highest stats and declare them the winner.
 // TODO: local storage save matchup and who won on match up
