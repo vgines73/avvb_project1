@@ -86,12 +86,10 @@ function addChart(chartNum, source) {
 function dataContest(i,combat,durability,intelligence,power,speed,strength) {
     setFighterStats(i,combat,durability,intelligence,power,speed,strength);
     // Calculates the fighter's stat total and assigns it to a variable.
-    if (i === 2) {
-        if (fighter1stats > fighter2stats) {
-            winnerName.textContent = nameFighter1.textContent + " Wins!";
-        } else {
-            winnerName.textContent = nameFighter2.textContent + " Wins!";
-        }
+    if (fighter1stats > fighter2stats) {
+        winnerName.textContent = nameFighter1.textContent + " Wins!";
+    } else {
+        winnerName.textContent = nameFighter2.textContent + " Wins!";
     }
 }
 
@@ -107,6 +105,7 @@ function setFighterStats(i,combat,durability,intelligence,power,speed,strength) 
 loadFight(289, 41)
 // Placeholder call that runs our fighterIDs.
 
+// TODO: A fix. The system is sometimes incorrectly naming a fighter the winner, when they lost.
 // TODO: Unfortunately, some Heroes don't have stats. Will need to write some kind of response.
 // TODO: local storage save matchup and who won on match up
 // WISHLIST: Use ftAry so that it is an array through all its child functions.
