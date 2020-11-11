@@ -1,5 +1,7 @@
 let proxyurl = "https://cors-anywhere.herokuapp.com/";
 let chartUrl = "https://image-charts.com/chart";
+let fighter1stats = 0;
+let fighter2stats = 0;
 
 function loadFight(fighter1, fighter2) {
     getApi(1,fullUrl(fighter1))
@@ -28,8 +30,9 @@ function getApi(i, chosenUrl) {
             console.log(data);
             ftAry = [data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength,data.name]
             fighterData(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5],ftAry[6]);
-            dataContest(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5],ftAry[6]);
+            dataContest(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5]);
         // This is the meat and potatoes. Will utilize our data in the various ways we need it to.
+        // FighterData will create the name and charts. dataContest determines the winner.
         })
         .catch(function(err){
             console.log(err);
@@ -80,13 +83,30 @@ function addChart(chartNum, source) {
     }
 }
 
-function dataContest(i,combat,durability,intelligence,power,speed,strength,name) {
-    console.log(parseInt(combat)+parseInt(durability)+parseInt(intelligence)+parseInt(power)+parseInt(speed)+parseInt(strength))
+function dataContest(i,combat,durability,intelligence,power,speed,strength) {
+    setFighterStats(i,combat,durability,intelligence,power,speed,strength);
+    // Calculates the fighter's stat total and assigns it to a variable.
+    if (i === 2) {
+        if (fighter1stats > fighter2stats) {
+            winnerName.textContent = nameFighter1.textContent + " Wins!";
+        } else {
+            winnerName.textContent = nameFighter2.textContent + " Wins!";
+        }
+    }
+}
+
+function setFighterStats(i,combat,durability,intelligence,power,speed,strength) {
+    let calculation = parseInt(combat)+parseInt(durability)+parseInt(intelligence)+parseInt(power)+parseInt(speed)+parseInt(strength);
+    if (i === 1) {
+        fighter1stats = calculation;
+    } else {
+        fighter2stats = calculation;
+    }
 }
 
 loadFight(289, 41)
 // Placeholder call that runs our fighterIDs.
 
 // TODO: Unfortunately, some Heroes don't have stats. Will need to write some kind of response.
-// TODO: Calculate who has the highest stats and declare them the winner.
 // TODO: local storage save matchup and who won on match up
+// WISHLIST: Use ftAry so that it is an array through all its child functions.
