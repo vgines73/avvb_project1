@@ -26,7 +26,9 @@ function getApi(i, chosenUrl) {
         })
         .then(function (data) {
             console.log(data);
-            fighterData(i,data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength,data.name);
+            ftAry = [data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength,data.name]
+            fighterData(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5],ftAry[6]);
+            dataContest(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5],ftAry[6]);
         // This is the meat and potatoes. Will utilize our data in the various ways we need it to.
         })
         .catch(function(err){
@@ -76,6 +78,10 @@ function addChart(chartNum, source) {
         barChart2.append(source);
         // If this is fighter 2, append it to the right side.
     }
+}
+
+function dataContest(i,combat,durability,intelligence,power,speed,strength,name) {
+    console.log(parseInt(combat)+parseInt(durability)+parseInt(intelligence)+parseInt(power)+parseInt(speed)+parseInt(strength))
 }
 
 loadFight(289, 41)
