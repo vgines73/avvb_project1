@@ -508,6 +508,6 @@ let heroList = [
 //     let dropDown1 = heroList.length;
 // let dropDown2 = herList.length;
 for (let i = 0; i < heroList.length; i++) {
-    console.log(heroList[i][1])
+    console.log(heroList[i]);
 
 }

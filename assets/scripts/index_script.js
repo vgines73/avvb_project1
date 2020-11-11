@@ -1,9 +1,5 @@
 let proxyurl = "https://cors-anywhere.herokuapp.com/";
-<<<<<<< HEAD
-let fightUrl = "https://superheroapi.com/api/1073994739725347/1/powerstats";
-=======
 let fightUrl = `https://superheroapi.com/api/1073994739725347/1/powerstats`;
->>>>>>> vgines73-main
 let requestUrl = proxyurl + fightUrl
 
 function getApi(requestUrl) {
@@ -12,13 +8,15 @@ function getApi(requestUrl) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
+          //  console.log(data);
         })
 }
 
-<<<<<<< HEAD
 getApi(requestUrl);
 
-=======
-getApi(requestUrl);
->>>>>>> vgines73-main
+// creating option list in html and appending it 
+optionOne = document.querySelector("#option-one");
+document.createElement("option")
+option.append(heroList);
+optionOne.append(option)
+console.log(optionOne)
