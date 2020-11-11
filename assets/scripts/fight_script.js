@@ -108,3 +108,9 @@ loadFight(289, 41)
 // TODO: Unfortunately, some Heroes don't have stats. Will need to write some kind of response.
 // TODO: local storage save matchup and who won on match up
 // WISHLIST: Use ftAry so that it is an array through all its child functions.
+// local storage save matchup and who won on match up
+
+goBackButton = document.querySelector("#go-back-button");
+function goBack() {
+    window.location.href="" // live site goes here.
+}
