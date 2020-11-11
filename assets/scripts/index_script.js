@@ -14,4 +14,12 @@ function getApi(requestUrl) {
 
 getApi(requestUrl);
 
+// creating option list in html and appending it 
 
+function selectHeroOne() {
+    let optionOne = document.querySelector("#option-one");
+    let option = document.createElement("option")
+    option.append(heroList[1][1]);
+    optionOne.append(option);
+    console.log(optionOne);
+}

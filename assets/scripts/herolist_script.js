@@ -512,11 +512,4 @@ for (let i = 0; i < heroList.length; i++) {
     selectHeroOne();
 
 }
-// creating option list in html and appending it 
-function selectHeroOne() {
-    let optionOne = document.querySelector("#option-one");
-    let option = document.createElement("option")
-    option.append(heroList[i][1]);
-    optionOne.append(option);
-    console.log(optionOne);
-}
+
