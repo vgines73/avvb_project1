@@ -1,7 +1,10 @@
 let proxyurl = "https://cors-anywhere.herokuapp.com/";
 let chartUrl = "https://image-charts.com/chart";
-let barChart1 = document.querySelector("#barChart1");
 
+function loadFight(fighter1, fighter2) {
+    getApi(1,fullUrl(fighter1))
+    getApi(2,fullUrl(fighter2))
+}
 
 function fullUrl(fighterId) {
     let fighterURL = proxyurl + determineFighter(fighterId);
@@ -14,7 +17,7 @@ function determineFighter(fighterId) {
 }
 
 function getApi(i, chosenUrl) {
-    return fetch(chosenUrl)
+    fetch(chosenUrl)
         .then(function (response) {
             return response.json();
         })
@@ -30,14 +33,7 @@ function getApi(i, chosenUrl) {
 function loadCharts(i,combat,durability,intelligence,power,speed,strength) {
     let popChart = document.createElement("img")
     popChart.setAttribute("src", `https://image-charts.com/chart?cht=bvg&chd=t:${combat},${durability},${intelligence},${power},${speed},${strength}&chbr=10&chxt=x&chs=500x300&chl=${combat}|${durability}|${intelligence}|${power}|${speed}|${strength}&chxl=0:|Combat|Durability|Intelligence|Power|Speed|Strength`)
-    function addChart(chartNum) {
-        if (chartNum === 1) {
-            barChart1.append(popChart)
-        } else {
-            barChart2.append(popChart)
-        }
-    }
-    addChart(i);
+    addChart(i, popChart);
     // Chart type: cht=<type_code> <-- bvg is the bar graph type.
     // Chart data: chd=t:<data>,<data> etc. <-- Actually modifies the chart's visuals to match the numeric data.
     // Chart size: chs=<chart_size>x</chart_size>
@@ -48,12 +44,17 @@ function loadCharts(i,combat,durability,intelligence,power,speed,strength) {
     // Chart XL: chxl=0:|<parameter>|<parameter>| etc. <-- provides a title under the chart for the data.
 }
 
-function loadFight(fighter1, fighter2) {
-    getApi(1,fullUrl(fighter1))
-    getApi(2,fullUrl(fighter2))
+function addChart(chartNum, source) {
+    if (chartNum === 1) {
+        barChart1.append(source)
+    } else {
+        barChart2.append(source)
+    }
 }
 
 loadFight(289, 41)
 
+// TODO: The names of the fighters to dynamically update.
 // TODO: Unfortunately, some Heroes don't have stats. Will need to write some kind of response.
+// TODO: Calculate who has the highest stats and declare them the winner.
 // TODO: local storage save matchup and who won on match up
