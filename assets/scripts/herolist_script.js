@@ -508,6 +508,15 @@ let heroList = [
 //     let dropDown1 = heroList.length;
 // let dropDown2 = herList.length;
 for (let i = 0; i < heroList.length; i++) {
-    console.log(heroList[i]);
+    console.log(heroList[i][1]);
+    selectHeroOne();
 
+}
+// creating option list in html and appending it 
+function selectHeroOne() {
+    let optionOne = document.querySelector("#option-one");
+    let option = document.createElement("option")
+    option.append(heroList[i][1]);
+    optionOne.append(option);
+    console.log(optionOne);
 }
