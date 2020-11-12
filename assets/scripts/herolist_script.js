@@ -1,4 +1,5 @@
 optionOne = document.querySelector("#option-one")
+
 let heroList = [
 
     [1, "A-Bomb"],
@@ -103,7 +104,7 @@ let heroList = [
     [100, "Black Flash"],
     [101, "Black Goliath"],
     [102, "Black Knight III"],
-    [103, "Black Lightning"]
+    [103, "Black Lightning"],
     [104, "Black Mamba"],
     [105, "Black Manta"],
     [106, "Black Panther"],
@@ -500,9 +501,8 @@ let heroList = [
     [497, "Nova"],
     [498, "Odin"],
     [499, "Offspring"],
-    [500, "Omega Red"]
+    [500, "Omega Red"],
 ]
-
 
 
 // let select = document.getElementById("select"),
