@@ -1,3 +1,4 @@
+optionOne = document.querySelector("#option-one")
 let heroList = [
 
     [1, "A-Bomb"],
@@ -508,9 +509,12 @@ let heroList = [
 //     let dropDown1 = heroList.length;
 // let dropDown2 = herList.length;
 for (let i = 0; i < heroList.length; i++) {
-    console.log(heroList[i][1]);
-    selectHeroOne();
-    selectHeroTwo();
-
+    //console.log(heroList[i]);
+    //selectHeroOne();
+    // selectHeroTwo();
+    var option = document.createElement("option")
+        text = document.createTextNode(heroList[i][1])
+    option.appendChild(text)
+    optionOne.insertBefore(option,optionOne.lastChild)
 }
 

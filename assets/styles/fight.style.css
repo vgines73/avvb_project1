@@ -22,10 +22,10 @@ h1 {
     align-items: center;
 }
 
-.content {
-    width: 275px;
-    height: 350px;
-}
+/* .content {
+    width: auto;
+    height: auto;
+} */
 
 .winner-card {
     background-color: whitesmoke!important;
