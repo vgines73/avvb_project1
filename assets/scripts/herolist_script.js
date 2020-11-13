@@ -1,5 +1,4 @@
-optionOne = document.querySelector("#option-one");
-optionTwo = document.querySelector("#option-two");
+
 let heroList = [
 
     [1, "A-Bomb"],
@@ -748,13 +747,20 @@ for (let i = 0; i < heroList.length; i++) {
     document.getElementById("heros2").append(option2);
 }
 
+versus = document.querySelector("#versus")
+fightButton = document.querySelector("#fight-button")
+fightButton.style.display = "none"
+
 function heroSelect() {
     let hero1 = document.getElementById("heros").value;
     let hero2 = document.getElementById("heros2").value;
     console.log(hero1, hero2)
     if (hero1 !== "" && hero2 !== "") {
-        document.getElementById("fight").textContent = "Fight!";
+       // document.getElementById("fight").textContent = "Fight!";
         // Add the rest of eventlistener functionality
+        fightButton.style.display = "block";
+        versus.style.display = "none";
+
 
     }
 }

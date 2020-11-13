@@ -18,17 +18,13 @@ h1 {
 #go-back-button {
     padding: 30px!important;
 }
+
 .button-center,
 .column {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-/* .content {
-    width: auto;
-    height: auto;
-} */
 
 .winner-card {
     background-color: whitesmoke!important;
