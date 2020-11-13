@@ -18,10 +18,11 @@ getApi(requestUrl);
 
 document.getElementById("fight-button").addEventListener("click", fight)
 function fight() {
-    localStorage.setItem("fighter1", heros.value);
-    localStorage.setItem("fighter2", heros2.value);
-    window.location.href = "fight.html"
-    loadFight();
+    if (heros.value !== "" && heros2.value !== "") {
+        localStorage.setItem("fighter1", heros.value);
+        localStorage.setItem("fighter2", heros2.value);
+        window.location.href = "fight.html"       
+    }
 }
 
 populateIndex();
