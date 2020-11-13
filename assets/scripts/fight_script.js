@@ -27,12 +27,15 @@ function getApi(i, chosenUrl) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
-            ftAry = [data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength,data.name]
-            fighterData(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5],ftAry[6]);
-            dataContest(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5]);
-        // This is the meat and potatoes. Will utilize our data in the various ways we need it to.
-        // FighterData will create the name and charts. dataContest determines the winner.
+            if (data.combat == "null" || data.durability == "null" || data.intelligence == "null" || data.power == "null" || data.speed == "null" || data.strength == "null") {
+                nameFighter1.textContent = `${data.name} is not available.`
+            } else {
+                ftAry = [data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength,data.name]
+                fighterData(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5],ftAry[6]);
+                dataContest(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5]);
+                // This is the meat and potatoes. Will utilize our data in the various ways we need it to.
+                // FighterData will create the name and charts. dataContest determines the winner.                
+            }
         })
         .catch(function(err){
             console.log(err);
