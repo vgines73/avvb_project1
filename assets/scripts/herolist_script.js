@@ -734,29 +734,25 @@ let heroList = [
     [731, "Zoom"],
 ]
 
-
-for (let i = 0; i < heroList.length; i++) {
-    console.log(heroList[i][1])
-    let option = document.createElement('option');
-    option.textContent = heroList[i][1];
-    option.value = heroList[i][1];
-    let option2 = document.createElement('option');
-    option2.textContent = heroList[i][1];
-    option.value = heroList[i][1];
-    document.getElementById("heros").append(option);
-    document.getElementById("heros2").append(option2);
+function populateIndex() {
+    for (let i = 0; i < heroList.length; i++) {
+        let option = document.createElement('option');
+        option.textContent = heroList[i][1];
+        option.value = `${heroList[i][0]} ${heroList[i][1]}`;
+        let option2 = document.createElement('option');
+        option2.textContent = heroList[i][1];
+        option2.value = `${heroList[i][0]} ${heroList[i][1]}`;
+        document.getElementById("heros").append(option);
+        document.getElementById("heros2").append(option2);
+    } 
 }
 
 function heroSelect() {
     let hero1 = document.getElementById("heros").value;
     let hero2 = document.getElementById("heros2").value;
-    console.log(hero1, hero2)
-    if (hero1 !== "" && hero2 !== "") {
-       // document.getElementById("fight").textContent = "Fight!";
-        // Add the rest of eventlistener functionality
+    if (hero1 !== "" && hero2 !== "" && hero1 !== hero2) {
         fightButton.style.display = "";
         versus.style.display = "none";
-
-
+        // Add the rest of eventlistener functionality
     }
 }

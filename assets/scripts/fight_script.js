@@ -27,12 +27,19 @@ function getApi(i, chosenUrl) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
-            ftAry = [data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength,data.name]
-            fighterData(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5],ftAry[6]);
-            dataContest(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5]);
-        // This is the meat and potatoes. Will utilize our data in the various ways we need it to.
-        // FighterData will create the name and charts. dataContest determines the winner.
+            if (data.combat == "null" || data.durability == "null" || data.intelligence == "null" || data.power == "null" || data.speed == "null" || data.strength == "null") {
+                if (i == 1) {
+                    nameFighter1.textContent = `${data.name} is not available.` 
+                } else {
+                    nameFighter2.textContent = `${data.name} is not available.`
+                }
+            } else {
+                ftAry = [data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength,data.name]
+                fighterData(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5],ftAry[6]);
+                dataContest(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5]);
+                // This is the meat and potatoes. Will utilize our data in the various ways we need it to.
+                // FighterData will create the name and charts. dataContest determines the winner.                
+            }
         })
         .catch(function(err){
             console.log(err);
@@ -102,13 +109,12 @@ function setFighterStats(i,combat,durability,intelligence,power,speed,strength) 
     }
 }
 
-loadFight(289, 41)
-// Placeholder call that runs our fighterIDs.
+loadFight(parseFloat(localStorage.getItem("fighter1")), parseFloat(localStorage.getItem("fighter2")))
+// Pulls from local storage to populate the entire page.
 
 // TODO: Unfortunately, some Heroes don't have stats. Will need to write some kind of response.
 // TODO: local storage save matchup and who won on match up
 // WISHLIST: Use ftAry so that it is an array through all its child functions.
-// local storage save matchup and who won on match up
 
 document.getElementById("go-back-button").addEventListener("click", goBack)
 function goBack() {
