@@ -747,10 +747,6 @@ for (let i = 0; i < heroList.length; i++) {
     document.getElementById("heros2").append(option2);
 }
 
-versus = document.querySelector("#versus")
-fightButton = document.querySelector("#fight-button")
-fightButton.style.display = "none"
-
 function heroSelect() {
     let hero1 = document.getElementById("heros").value;
     let hero2 = document.getElementById("heros2").value;
@@ -758,7 +754,7 @@ function heroSelect() {
     if (hero1 !== "" && hero2 !== "") {
        // document.getElementById("fight").textContent = "Fight!";
         // Add the rest of eventlistener functionality
-        fightButton.style.display = "block";
+        fightButton.style.display = "";
         versus.style.display = "none";
 
 

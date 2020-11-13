@@ -15,6 +15,9 @@ function getApi(requestUrl) {
 
 getApi(requestUrl);
 
+versus = document.querySelector("#versus")
+fightButton = document.querySelector("#fight-button")
+fightButton.style.display = "none"
 
 // fight button function
 
