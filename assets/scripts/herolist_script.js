@@ -1,5 +1,4 @@
-optionOne = document.querySelector("#option-one");
-optionTwo = document.querySelector("#option-two");
+
 let heroList = [
 
     [1, "A-Bomb"],
@@ -752,7 +751,8 @@ function heroSelect() {
     let hero1 = document.getElementById("heros").value;
     let hero2 = document.getElementById("heros2").value;
     if (hero1 !== "" && hero2 !== "" && hero1 !== hero2) {
-        document.getElementById("fight").textContent = "Fight!";
+        fightButton.style.display = "";
+        versus.style.display = "none";
         // Add the rest of eventlistener functionality
     }
 }

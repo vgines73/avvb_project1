@@ -18,15 +18,17 @@ h1 {
 .recent-fights {
     background-color: whitesmoke!important;
 }
+
+#heros,
+#heros2 {
+    width: 225px!important;
+}
+
+
+#fight-button {
+    padding: 30px!important;
+}
 .options {
     font-family: 'Bangers', cursive!important;
     width: 150px!important;
-}
-
-#dropdown-toggle {
-    display:none;
-}
-
-#dropdown-toggle:checked ~ #dropdown-menu {
-    display: block;
 }
