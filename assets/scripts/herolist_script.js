@@ -1,5 +1,5 @@
-optionOne = document.querySelector("#option-one")
-
+optionOne = document.querySelector("#option-one");
+optionTwo = document.querySelector("#option-two");
 let heroList = [
 
     [1, "A-Bomb"],
@@ -510,20 +510,16 @@ let heroList = [
 // let dropDown2 = herList.length;
 for (let i = 0; i < heroList.length; i++) {
     //console.log(heroList[i]);
-    //selectHeroOne();
-    // selectHeroTwo();
-    var option = document.createElement("option")
-        text = document.createTextNode(heroList[i][1])
-    option.appendChild(text)
-    optionOne.insertBefore(option,optionOne.lastChild)
+    var option = document.createElement("option");
+        text = document.createTextNode(heroList[i][1]);
+    option.appendChild(text);
+    optionOne.insertBefore(option,optionOne.lastChild);
 }
-optionTwo = document.querySelector("#option-two")
+
 for (let i = 0; i < heroList.length; i++) {
     //console.log(heroList[i]);
-    //selectHeroOne();
-    // selectHeroTwo();
-    var optionHeroTwo = document.createElement("option")
-        textTwo = document.createTextNode(heroList[i][1])
-    optionHeroTwo.appendChild(textTwo)
-    optionTwo.insertBefore(optionHeroTwo,optionTwo.lastChild)
+    var optionHeroTwo = document.createElement("option");
+        textTwo = document.createTextNode(heroList[i][1]);
+    optionHeroTwo.appendChild(textTwo);
+    optionTwo.insertBefore(optionHeroTwo,optionTwo.lastChild);
 }
