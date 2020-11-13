@@ -517,4 +517,13 @@ for (let i = 0; i < heroList.length; i++) {
     option.appendChild(text)
     optionOne.insertBefore(option,optionOne.lastChild)
 }
-
+optionTwo = document.querySelector("#option-two")
+for (let i = 0; i < heroList.length; i++) {
+    //console.log(heroList[i]);
+    //selectHeroOne();
+    // selectHeroTwo();
+    var optionHeroTwo = document.createElement("option")
+        textTwo = document.createTextNode(heroList[i][1])
+    optionHeroTwo.appendChild(textTwo)
+    optionTwo.insertBefore(optionHeroTwo,optionTwo.lastChild)
+}
