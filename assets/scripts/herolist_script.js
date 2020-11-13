@@ -1,3 +1,5 @@
+optionOne = document.querySelector("#option-one");
+optionTwo = document.querySelector("#option-two");
 let heroList = [
 
     [1, "A-Bomb"],
@@ -102,7 +104,7 @@ let heroList = [
     [100, "Black Flash"],
     [101, "Black Goliath"],
     [102, "Black Knight III"],
-    [103, "Black Lightning"]
+    [103, "Black Lightning"],
     [104, "Black Mamba"],
     [105, "Black Manta"],
     [106, "Black Panther"],
@@ -499,15 +501,25 @@ let heroList = [
     [497, "Nova"],
     [498, "Odin"],
     [499, "Offspring"],
-    [500, "Omega Red"]
+    [500, "Omega Red"],
 ]
-
 
 
 // let select = document.getElementById("select"),
 //     let dropDown1 = heroList.length;
 // let dropDown2 = herList.length;
 for (let i = 0; i < heroList.length; i++) {
-    console.log(heroList[i][1])
+    //console.log(heroList[i]);
+    var option = document.createElement("option");
+        text = document.createTextNode(heroList[i][1]);
+    option.appendChild(text);
+    optionOne.insertBefore(option,optionOne.lastChild);
+}
 
+for (let i = 0; i < heroList.length; i++) {
+    //console.log(heroList[i]);
+    var optionHeroTwo = document.createElement("option");
+        textTwo = document.createTextNode(heroList[i][1]);
+    optionHeroTwo.appendChild(textTwo);
+    optionTwo.insertBefore(optionHeroTwo,optionTwo.lastChild);
 }

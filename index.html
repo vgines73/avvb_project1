@@ -12,7 +12,7 @@
     <title>Superhero Showdown</title>
 </head>
 
-<body>
+<body class="is-mobile">
     <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
@@ -106,11 +106,8 @@
                                     <div class="field is-narrow">
                                         <div class="control">
                                             <div class="select is-fullwidth">
-                                                <select class="options">
+                                                <select class="options" id="option-one">
                                                     <!-- list of heroes go here -->
-                                                    <option>Superman</option>
-                                                    <option>Batman</option>
-                                                    <option>Spider-Man</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -120,38 +117,29 @@
                         </div>
                     </article>
                     <article class="column is-one-fifths">
-                        <button id="fight-button" class="button is-danger">
+                        <button id="fight-button" class="button is-danger is-focused">
                             <p class="title is-1">Fight!</p>
                         </button>
                     </article>
                     <article class="column is-one-fifths">
                         <div class="dropdown is-active">
-                            <div class="dropdown is-active">
-                                <div class="dropdown-trigger">
-                                    <button class="button button-select" aria-haspopup="true" aria-controls="dropdown-menu2">
-                                        <span>Select Your Character</span>
-                                        <span class="icon is-small">
-                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                        </span>
-                                    </button>
+                            <div class="field is-vertical">
+                                <div class="field-label is-normal">
+                                    <label class="label">Select your Character</label>
                                 </div>
-                                <div class="dropdown-menu" id="dropdown-menu2" role="menu">
-                                    <div class="dropdown-content">
-                                        <div class="dropdown-item">
-                                            <p>You can insert <strong>any type of content</strong> within the dropdown
-                                                menu.</p>
+                                <div class="field-body">
+                                    <div class="field is-narrow">
+                                        <div class="control">
+                                            <div class="select is-fullwidth">
+                                                <select class="options" id="option-two">
+                                                    <!-- list of heroes go here -->
+                                                </select>
+                                            </div>
                                         </div>
-                                        <hr class="dropdown-divider">
-                                        <div class="dropdown-item">
-                                            <p>You simply need to use a <code>&lt;div&gt;</code> instead.</p>
-                                        </div>
-                                        <hr class="dropdown-divider">
-                                        <a href="#" class="dropdown-item">
-                                            This is a link
-                                        </a>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </article>
                     <article class="column is-one-fifths">
                         <!-- empty div for spacing -->
