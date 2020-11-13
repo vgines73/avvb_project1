@@ -28,7 +28,11 @@ function getApi(i, chosenUrl) {
         })
         .then(function (data) {
             if (data.combat == "null" || data.durability == "null" || data.intelligence == "null" || data.power == "null" || data.speed == "null" || data.strength == "null") {
-                nameFighter1.textContent = `${data.name} is not available.`
+                if (i == 1) {
+                    nameFighter1.textContent = `${data.name} is not available.` 
+                } else {
+                    nameFighter2.textContent = `${data.name} is not available.`
+                }
             } else {
                 ftAry = [data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength,data.name]
                 fighterData(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5],ftAry[6]);
