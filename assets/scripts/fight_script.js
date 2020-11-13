@@ -102,8 +102,8 @@ function setFighterStats(i,combat,durability,intelligence,power,speed,strength) 
     }
 }
 
-loadFight(289, 41)
-// Placeholder call that runs our fighterIDs.
+loadFight(parseFloat(localStorage.getItem("fighter1")), parseFloat(localStorage.getItem("fighter2")))
+// Pulls from local storage to populate the entire page.
 
 // TODO: Unfortunately, some Heroes don't have stats. Will need to write some kind of response.
 // TODO: local storage save matchup and who won on match up

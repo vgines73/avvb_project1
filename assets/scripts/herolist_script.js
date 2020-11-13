@@ -739,10 +739,10 @@ function populateIndex() {
     for (let i = 0; i < heroList.length; i++) {
         let option = document.createElement('option');
         option.textContent = heroList[i][1];
-        option.value = `${heroList[i][1]} ${heroList[i][0]}`;
+        option.value = `${heroList[i][0]} ${heroList[i][1]}`;
         let option2 = document.createElement('option');
         option2.textContent = heroList[i][1];
-        option2.value = `${heroList[i][1]} ${heroList[i][0]}`;
+        option2.value = `${heroList[i][0]} ${heroList[i][1]}`;
         document.getElementById("heros").append(option);
         document.getElementById("heros2").append(option2);
     } 
