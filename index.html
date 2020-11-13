@@ -106,8 +106,12 @@
                                     <div class="field is-narrow">
                                         <div class="control">
                                             <div class="select is-fullwidth">
-                                                <select class="options" id="option-one">
+                                                <select id="heros" class="options" onchange="heroSelect()">
+                                                    <option value=""></option>
                                                     <!-- list of heroes go here -->
+                                                    <!-- <option>Superman</option>
+                                                    <option>Batman</option>
+                                                    <option>Spider-Man</option> -->
                                                 </select>
                                             </div>
                                         </div>
@@ -117,11 +121,11 @@
                         </div>
                     </article>
                     <article class="column is-one-fifths">
-                        <button id="fight-button" class="button is-danger is-focused">
-                            <p class="title is-1">Fight!</p>
+                        <button id="fight-button" class="button is-danger">
+                            <p id="fight" class="title is-1">VS.</p>
                         </button>
                     </article>
-                    <article class="column is-one-fifths">
+                    <article class="column is-one fifths">
                         <div class="dropdown is-active">
                             <div class="field is-vertical">
                                 <div class="field-label is-normal">
@@ -131,8 +135,12 @@
                                     <div class="field is-narrow">
                                         <div class="control">
                                             <div class="select is-fullwidth">
-                                                <select class="options" id="option-two">
+                                                <select id="heros2" class="options" onchange="heroSelect()">
+                                                    <option value=""></option>
                                                     <!-- list of heroes go here -->
+                                                    <!-- <option>Superman</option>
+                                                    <option>Batman</option>
+                                                    <option>Spider-Man</option> -->
                                                 </select>
                                             </div>
                                         </div>
