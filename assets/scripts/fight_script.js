@@ -24,6 +24,13 @@ function determineFighter(fighterId) {
 function getApi(i, chosenUrl) {
     fetch(chosenUrl)
         .then(function (response) {
+            if (response.status == 404) {
+                if (i == 1) {
+                    nameFighter1.textContent = `The API failed to load this Fighter.` 
+                } else {
+                    nameFighter2.textContent = `The API failed to load this Fighter.` 
+                }
+            }
             return response.json();
         })
         .then(function (data) {
@@ -33,7 +40,7 @@ function getApi(i, chosenUrl) {
                 } else {
                     nameFighter2.textContent = `${data.name} is not available.`
                 }
-            } else {
+            } else{
                 ftAry = [data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength,data.name]
                 fighterData(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5],ftAry[6]);
                 dataContest(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5]);
@@ -112,9 +119,10 @@ function setFighterStats(i,combat,durability,intelligence,power,speed,strength) 
 loadFight(parseFloat(localStorage.getItem("fighter1")), parseFloat(localStorage.getItem("fighter2")))
 // Pulls from local storage to populate the entire page.
 
-// TODO: Unfortunately, some Heroes don't have stats. Will need to write some kind of response.
+// TODO: Need to write a response for when the API fails.
 // TODO: local storage save matchup and who won on match up
 // WISHLIST: Use ftAry so that it is an array through all its child functions.
+// WISHLIST: The character's image appears.
 
 document.getElementById("go-back-button").addEventListener("click", goBack)
 function goBack() {
