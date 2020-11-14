@@ -4,8 +4,9 @@
 
 .index-background {
     background-image: url(../images/marvel-black\ and\ white.jpg);
-    height: 3000px;
-    width: 1500px;
+    background-size: cover;
+    padding-bottom: 1000px;
+    
 }
 
 .title-background {
