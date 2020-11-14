@@ -1,8 +1,8 @@
 * {
     font-family: 'Bangers', cursive;
-
 }
 
+/* ADDED BACKGROUND COLOR TO SELECTED CLASSES */
 .navbar,
 .options,
 .button-select,
@@ -10,31 +10,33 @@
     background-color: whitesmoke!important;
 }
 
+/* ADDED LETTER SPACING TO CLASS */
 h1 {
     letter-spacing: .3rem;
 }
 
+/* CENTERING EVERYTHING INSIDE COLUMNS */
 .column {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* ADDED FONT AND WIDTH TO THE DROPDOWN BUTTON TO SHOW ENTIRE NAME OF THE CHARACTER */
 #heros,
 #heros2 {
     width: 225px!important;
-}
-
-.options {
     font-family: 'Bangers', cursive!important;
-    width: 150px!important;
 }
 
-
+/* ADDED PADDING TO FIGHT BUTTON */
 #fight-button {
     padding: 30px!important;
 }
 
+/* CONTACT PAGE */
+
+/* LETTER SPACING FOR LABELS */
 .label {
     letter-spacing: 1px;
 }

@@ -1,24 +1,20 @@
 * {
     font-family: 'Bangers', cursive;
-
-
 }
 
-/* .fight-background {
-    background-image: url(../../assets/images/images-pg-2/card-background.jpg);
-    background-size: cover;
-} */
-
+/* ADDED LARGER FONT, COLOR AND LETTER SPACING TO H1 */
 h1 {
     font-size: larger;
     letter-spacing: .3rem;
     color: black!important;
 }
 
+/* ADDED PADDING TO GO BACK BUTTON */
 #go-back-button {
     padding: 30px!important;
 }
 
+/* CENTERING THE BUTTON AND COLUMNS */
 .button-center,
 .column {
     display: flex;
@@ -26,9 +22,8 @@ h1 {
     align-items: center;
 }
 
+/* ADDING BACKGROUND COLOR TO WINNER CARD */
 .winner-card {
     background-color: whitesmoke!important;
 }
 
-
-/* TODO: I may design a background for our app if time permits. */
