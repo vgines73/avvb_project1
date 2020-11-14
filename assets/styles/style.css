@@ -2,7 +2,16 @@
     font-family: 'Bangers', cursive;
 }
 
+.index-background {
+    background-image: url(../images/marvel-black\ and\ white.jpg);
+    height: 3000px;
+    width: 1500px;
+}
 
+.title-background {
+    background-image: url(../images/card-background\ black-white-index.jpg);
+    background-size: contain;
+}
 /* ADDED BACKGROUND COLOR TO SELECTED CLASSES */
 .navbar,
 .options,
@@ -35,9 +44,8 @@ h1 {
     padding: 30px!important;
 }
 
-/* CONTACT PAGE */
-
 /* LETTER SPACING FOR LABELS */
 .label {
     letter-spacing: 1px;
+    color: whitesmoke!important;
 }

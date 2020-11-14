@@ -2,6 +2,18 @@
     font-family: 'Bangers', cursive;
 }
 
+/* BACKGROUND IMAGE */
+.fight-background {
+    background-image: url(../images/marvel-black\ and\ white.jpg);
+    background-size: cover;
+}
+
+/* BACKGROUND CARD IMAGE */
+.card-background {
+    background-image: url(../images/card-black-white-half-tone-fight.jpg);
+    background-size: cover;  
+}
+
 /* ADDED LARGER FONT, COLOR AND LETTER SPACING TO H1 */
 h1 {
     font-size: larger;
@@ -22,7 +34,8 @@ h1 {
     align-items: center;
 }
 
-/* ADDING BACKGROUND COLOR TO WINNER CARD */
+/* ADDING BACKGROUND COLOR TO WINNER CARD AND NAVBAR */
+.navbar
 .winner-card {
     background-color: whitesmoke!important;
 }
