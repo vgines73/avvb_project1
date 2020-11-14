@@ -30,6 +30,7 @@ function getApi(i, chosenUrl) {
                 } else {
                     nameFighter2.textContent = `The API failed to load this Fighter.` 
                 }
+                // This is used primarily when the API is down.
             }
             return response.json();
         })
@@ -40,6 +41,7 @@ function getApi(i, chosenUrl) {
                 } else {
                     nameFighter2.textContent = `${data.name} is not available.`
                 }
+                // Some fighters don't have parts of data. This is us displaying that they are unavailable.
             } else{
                 ftAry = [data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength,data.name]
                 fighterData(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5],ftAry[6]);
@@ -115,6 +117,7 @@ function setFighterStats(i,combat,durability,intelligence,power,speed,strength) 
     } else {
         fighter2stats = calculation;
     }
+    // This will set the global variable to the fighter's combined stats.
 }
 
 loadFight(parseFloat(localStorage.getItem("fighter1")), parseFloat(localStorage.getItem("fighter2")))
@@ -129,3 +132,4 @@ document.getElementById("go-back-button").addEventListener("click", goBack)
 function goBack() {
     window.location.href="index.html"
 }
+// The Back Button functionality.
