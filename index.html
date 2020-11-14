@@ -12,57 +12,18 @@
     <title>Superhero Showdown</title>
 </head>
 
-<body class="is-mobile">
+<body class="is-mobile container">
     <header>
+        <!-- Navbar -->
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" href="">
-                    <h2 class="title is 5">AVVB</h2>
+                <a class="navbar-item" href="./index.html">
+                    <h2 class="title is 5">VBV</h2>
                 </a>
-
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item" href="">
-                        Powerstats
-                    </a>
-
-                    <a class="navbar-item" href="">
-                        Biography
-                    </a>
-
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                            More
-                        </a>
-                        <!-- if time permits maybe the other api references -->
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item" href="">
-                                About
-                            </a>
-                            <a class="navbar-item">
-                                Jobs
-                            </a>
-                            <a class="navbar-item">
-                                Contact
-                            </a>
-                            <hr class="navbar-divider">
-                            <a class="navbar-item">
-                                Report an issue
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </nav>
     </header>
+    <!-- Title Page -->
     <section class="card">
         <div class="card-content">
             <div class="media">
@@ -78,8 +39,9 @@
         <div class="container">
             <div class="row">
                 <section class="columns">
-                    <div class="column is-one-fifths"></div>
+                    <div class="column is-one-fifths"> <!-- empty column for spacing --> </div>
                     <article class="column is-one fifths">
+                        <!-- dropdown for selecting the first character -->
                         <div class="dropdown is-active">
                             <div class="field is-vertical">
                                 <div class="field-label is-normal">
@@ -89,12 +51,11 @@
                                     <div class="field is-narrow">
                                         <div class="control">
                                             <div class="select is-fullwidth">
-                                                <select id="heros" class="options" onchange="heroSelect()">
-                                                    <option value=""></option>
-                                                    <!-- list of heroes go here -->
-                                                    <!-- <option>Superman</option>
-                                                    <option>Batman</option>
-                                                    <option>Spider-Man</option> -->
+                                                <select id="heros" class="options is-focused is-hovered"
+                                                    onchange="heroSelect()">
+                                                    <option value="">
+                                                        <!-- list of heroes go here -->
+                                                    </option>
                                                 </select>
                                             </div>
                                         </div>
@@ -104,6 +65,7 @@
                         </div>
                     </article>
                     <article class="column is-one-fifths">
+                        <!-- section for button; versus is shown first; Once user selects both characters, fight button appears; versus disappers.-->
                         <section>
                             <p class="title is-1 hide" id="versus">VS</p>
                         </section>
@@ -114,6 +76,7 @@
                         </section>
                     </article>
                     <article class="column is-one fifths">
+                        <!-- dropdown for selecting second character -->
                         <div class="dropdown is-active">
                             <div class="field is-vertical">
                                 <div class="field-label is-normal">
@@ -123,12 +86,11 @@
                                     <div class="field is-narrow">
                                         <div class="control">
                                             <div class="select is-fullwidth">
-                                                <select id="heros2" class="options" onchange="heroSelect()">
-                                                    <option value=""></option>
-                                                    <!-- list of heroes go here -->
-                                                    <!-- <option>Superman</option>
-                                                    <option>Batman</option>
-                                                    <option>Spider-Man</option> -->
+                                                <select id="heros2" class="options is-hovered is-focused"
+                                                    onchange="heroSelect()">
+                                                    <option value="">
+                                                        <!-- list of heroes go here -->
+                                                    </option>
                                                 </select>
                                             </div>
                                         </div>
