@@ -44,7 +44,7 @@
                     </div>
                     <article class="column is-one fifths">
                         <!-- DROPDOWN FOR SELECTING FIRST CHARACTER -->
-                        <div class="card">
+                        <div class="card card-dropdown">
                             <div class="dropdown is-active">
                                 <div class="field is-vertical">
                                     <div class="field-label is-normal">
@@ -70,18 +70,20 @@
                     </article>
                     <article class="column is-one-fifths">
                         <!-- BUTTON SECTION; versus is shown first; Once user selects both characters, fight button appears; versus disappers.-->
-                        <section>
-                            <p class="title is-1 hide" id="versus">VS</p>
-                        </section>
-                        <section>
-                            <button id="fight-button" class="button is-danger hide">
-                                <p class="title is-1">Fight!</p>
-                            </button>
-                        </section>
+                        <div class="card card-versus-fight">
+                            <section>
+                                <p class="title is-1 hide" id="versus">VS</p>
+                            </section>
+                            <section>
+                                <button id="fight-button" class="button is-danger hide">
+                                    <p class="title is-1">Fight!</p>
+                                </button>
+                            </section>
+                        </div>
                     </article>
                     <article class="column is-one fifths">
                         <!-- DROPDOWN FOR SELECTING SECOND CHARACTER -->
-                        <div class="card">
+                        <div class="card card-dropdown">
                             <div class="dropdown is-active">
                                 <div class="field is-vertical">
                                     <div class="field-label is-normal">

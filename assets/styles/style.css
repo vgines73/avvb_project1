@@ -34,6 +34,19 @@ h1 {
     align-items: center;
 }
 
+/* PADDING FOR DROPDOWN */
+.card-dropdown {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+}
+
+/* PADDING FOR BUTTON */
+.card-versus-fight {
+    padding: 20px;
+}
+
 /* ADDED FONT AND WIDTH TO THE DROPDOWN BUTTON TO SHOW ENTIRE NAME OF THE CHARACTER */
 #heros,
 #heros2 {
@@ -47,15 +60,7 @@ h1 {
 }
 
 /* LETTER SPACING FOR LABELS */
-
 .label {
     letter-spacing: 1px;
 
-}
-
-/* ABOUT PAGE STYLING */
-
-.about-background {
-    background-image: url(../images/Avengers-4-banner-Infinity-War-sequel-black-white.jpg);
-    background-size: auto;
 }
