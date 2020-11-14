@@ -8,6 +8,8 @@ On the Superhero Matchup page, you'll choose two characters to pit in the *ULTIM
 
 We've utilized two APIs to make this magic happen: Superhero API and Image-Charts. The Superhero API is where we pull data on over 700 fictional characters for your pure amusement, while the Image-Charts API provides us a way to convey that information meaningfully.
 
+You can easily find our page: [Deployed Here](https://victormoscone.github.io/vbv_project1)
+
 **To use**:
 1. Click on the drop-down boxes to find two fighters that you'd like to go head-to-head!
 2. Once both fighters are selected, click on FIGHT!
@@ -30,7 +32,7 @@ If we were given more time to improve the app we would:
 2. Launch index.html.
 
 Alternatively:
-1. Visit [Our Deployed Page!](https://victormoscone.github.io/vbv_project1/)
+1. Visit https://victormoscone.github.io/vbv_project1
 ```
 
 **Usage**
