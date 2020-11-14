@@ -101,10 +101,11 @@ function dataContest(i,combat,durability,intelligence,power,speed,strength) {
     setFighterStats(i,combat,durability,intelligence,power,speed,strength);
     // Calculates the fighter's stat total and assigns it to a variable.
     if (fighter1stats > fighter2stats) {
-        winnerName.textContent = nameFighter1.textContent + " Wins!";
+        winnerName.textContent = `${nameFighter1.textContent} Wins! ${fighter1stats} to ${fighter2stats}.`;
     } else {
-        winnerName.textContent = nameFighter2.textContent + " Wins!";
+        winnerName.textContent = `${nameFighter2.textContent} Wins! ${fighter2stats} to ${fighter1stats}.`;
     }
+    // Will display the name of the winner and the two scores.
 }
 
 function setFighterStats(i,combat,durability,intelligence,power,speed,strength) {
