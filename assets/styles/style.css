@@ -3,6 +3,13 @@
 
 }
 
+.navbar,
+.options,
+.button-select,
+.recent-fights {
+    background-color: whitesmoke!important;
+}
+
 h1 {
     letter-spacing: .3rem;
 }
@@ -12,23 +19,22 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-.navbar,
-.options,
-.button-select,
-.recent-fights {
-    background-color: whitesmoke!important;
-}
 
 #heros,
 #heros2 {
     width: 225px!important;
 }
 
+.options {
+    font-family: 'Bangers', cursive!important;
+    width: 150px!important;
+}
+
 
 #fight-button {
     padding: 30px!important;
 }
-.options {
-    font-family: 'Bangers', cursive!important;
-    width: 150px!important;
+
+.label {
+    letter-spacing: 1px;
 }

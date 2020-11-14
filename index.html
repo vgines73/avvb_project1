@@ -12,7 +12,7 @@
     <title>Superhero Showdown</title>
 </head>
 
-<body class="is-mobile">
+<body class="is-mobile container">
     <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
@@ -30,8 +30,8 @@
 
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="">
-                        Powerstats
+                    <a class="navbar-item" href="./index.html">
+                        Home
                     </a>
 
                     <a class="navbar-item" href="">
@@ -42,15 +42,11 @@
                         <a class="navbar-link">
                             More
                         </a>
-                        <!-- if time permits maybe the other api references -->
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="">
+                            <a class="navbar-item" href="./about.html">
                                 About
                             </a>
-                            <a class="navbar-item">
-                                Jobs
-                            </a>
-                            <a class="navbar-item">
+                            <a class="navbar-item" href="./contact.html">
                                 Contact
                             </a>
                             <hr class="navbar-divider">
@@ -89,12 +85,11 @@
                                     <div class="field is-narrow">
                                         <div class="control">
                                             <div class="select is-fullwidth">
-                                                <select id="heros" class="options" onchange="heroSelect()">
-                                                    <option value=""></option>
-                                                    <!-- list of heroes go here -->
-                                                    <!-- <option>Superman</option>
-                                                    <option>Batman</option>
-                                                    <option>Spider-Man</option> -->
+                                                <select id="heros" class="options is-focused is-hovered"
+                                                    onchange="heroSelect()">
+                                                    <option value="">
+                                                        <!-- list of heroes go here -->
+                                                    </option>
                                                 </select>
                                             </div>
                                         </div>
@@ -123,12 +118,11 @@
                                     <div class="field is-narrow">
                                         <div class="control">
                                             <div class="select is-fullwidth">
-                                                <select id="heros2" class="options" onchange="heroSelect()">
-                                                    <option value=""></option>
-                                                    <!-- list of heroes go here -->
-                                                    <!-- <option>Superman</option>
-                                                    <option>Batman</option>
-                                                    <option>Spider-Man</option> -->
+                                                <select id="heros2" class="options is-hovered is-focused"
+                                                    onchange="heroSelect()">
+                                                    <option value="">
+                                                        <!-- list of heroes go here -->
+                                                    </option>
                                                 </select>
                                             </div>
                                         </div>
