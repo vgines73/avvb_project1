@@ -123,10 +123,6 @@ function setFighterStats(i,combat,durability,intelligence,power,speed,strength) 
 loadFight(parseFloat(localStorage.getItem("fighter1")), parseFloat(localStorage.getItem("fighter2")))
 // Pulls from local storage to populate the entire page.
 
-// TODO: local storage save matchup and who won on match up
-// WISHLIST: Use ftAry so that it is an array through all its child functions.
-// WISHLIST: The character's image appears.
-
 document.getElementById("go-back-button").addEventListener("click", goBack)
 function goBack() {
     window.location.href="index.html"

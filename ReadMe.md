@@ -22,8 +22,9 @@ For the most part, we overcame all of the challenges that we were faced with and
 If we were given more time to improve the app we would:
 1. Add a Pie Chart on the fight page that displays the total values of both fighters.
 2. Add a Recent Fights feed on the matchup page.
-3. At an About and Contact page.
-4. Refactor some of the Fight Script to be more concise and clean.
+3. Add an About and Contact page.
+4. Add the character's image behind the card on the fight page.
+5. Refactor some of the Fight Script to be more concise and clean. 
 
 ## Setup Instruction
 
