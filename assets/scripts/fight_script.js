@@ -24,6 +24,14 @@ function determineFighter(fighterId) {
 function getApi(i, chosenUrl) {
     fetch(chosenUrl)
         .then(function (response) {
+            if (response.status == 404) {
+                if (i == 1) {
+                    nameFighter1.textContent = `The API failed to load this Fighter.` 
+                } else {
+                    nameFighter2.textContent = `The API failed to load this Fighter.` 
+                }
+                // This is used primarily when the API is down.
+            }
             return response.json();
         })
         .then(function (data) {
@@ -33,7 +41,8 @@ function getApi(i, chosenUrl) {
                 } else {
                     nameFighter2.textContent = `${data.name} is not available.`
                 }
-            } else {
+                // Some fighters don't have parts of data. This is us displaying that they are unavailable.
+            } else{
                 ftAry = [data.combat,data.durability,data.intelligence,data.power,data.speed,data.strength,data.name]
                 fighterData(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5],ftAry[6]);
                 dataContest(i,ftAry[0],ftAry[1],ftAry[2],ftAry[3],ftAry[4],ftAry[5]);
@@ -94,10 +103,11 @@ function dataContest(i,combat,durability,intelligence,power,speed,strength) {
     setFighterStats(i,combat,durability,intelligence,power,speed,strength);
     // Calculates the fighter's stat total and assigns it to a variable.
     if (fighter1stats > fighter2stats) {
-        winnerName.textContent = nameFighter1.textContent + " Wins!";
+        winnerName.textContent = `${nameFighter1.textContent} Wins! ${fighter1stats} to ${fighter2stats}.`;
     } else {
-        winnerName.textContent = nameFighter2.textContent + " Wins!";
+        winnerName.textContent = `${nameFighter2.textContent} Wins! ${fighter2stats} to ${fighter1stats}.`;
     }
+    // Will display the name of the winner and the two scores.
 }
 
 function setFighterStats(i,combat,durability,intelligence,power,speed,strength) {
@@ -107,16 +117,14 @@ function setFighterStats(i,combat,durability,intelligence,power,speed,strength) 
     } else {
         fighter2stats = calculation;
     }
+    // This will set the global variable to the fighter's combined stats.
 }
 
 loadFight(parseFloat(localStorage.getItem("fighter1")), parseFloat(localStorage.getItem("fighter2")))
 // Pulls from local storage to populate the entire page.
 
-// TODO: Unfortunately, some Heroes don't have stats. Will need to write some kind of response.
-// TODO: local storage save matchup and who won on match up
-// WISHLIST: Use ftAry so that it is an array through all its child functions.
-
 document.getElementById("go-back-button").addEventListener("click", goBack)
 function goBack() {
     window.location.href="index.html"
 }
+// The Back Button functionality.

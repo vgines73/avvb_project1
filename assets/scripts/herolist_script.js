@@ -1,6 +1,4 @@
-
 let heroList = [
-
     [1, "A-Bomb"],
     [2, "Abe Sapien"],
     [3, "Abin Sur"],
@@ -736,23 +734,30 @@ let heroList = [
 
 function populateIndex() {
     for (let i = 0; i < heroList.length; i++) {
-        let option = document.createElement('option');
-        option.textContent = heroList[i][1];
-        option.value = `${heroList[i][0]} ${heroList[i][1]}`;
-        let option2 = document.createElement('option');
-        option2.textContent = heroList[i][1];
-        option2.value = `${heroList[i][0]} ${heroList[i][1]}`;
-        document.getElementById("heros").append(option);
-        document.getElementById("heros2").append(option2);
+        fillList(i, "option", "heros");
+        fillList(i, "option2", "heros2")
     } 
+    // On page load, this will run the fillList function to fill both drop-down boxes with our hero list.
+}
+
+function fillList(i, optionNum, dropdownNum) {
+    optionNum = document.createElement('option');
+    // Creates an option element in the drop down box.
+    optionNum.textContent = heroList[i][1];
+    // Gives that option the name of the current indexed character.
+    optionNum.value = `${heroList[i][0]} ${heroList[i][1]}`;
+    // Assigns a value to that option that includes the character's ID # and name.
+    document.getElementById(`${dropdownNum}`).append(optionNum);
+    // Appends the character to its respective drop down.
 }
 
 function heroSelect() {
     let hero1 = document.getElementById("heros").value;
     let hero2 = document.getElementById("heros2").value;
+    // Whenever a drop down is changed, it finds the new value.
     if (hero1 !== "" && hero2 !== "" && hero1 !== hero2) {
         fightButton.style.display = "";
         versus.style.display = "none";
-        // Add the rest of eventlistener functionality
+        // If two non-identical fighters are chosen, the VS icon disappears and the Fight button appears.
     }
 }
