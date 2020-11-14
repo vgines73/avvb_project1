@@ -13,7 +13,9 @@
     background-size: contain;
 }
 /* ADDED BACKGROUND COLOR TO SELECTED CLASSES */
+
 .navbar,
+.card,
 .options,
 .button-select,
 .recent-fights {
@@ -45,7 +47,15 @@ h1 {
 }
 
 /* LETTER SPACING FOR LABELS */
+
 .label {
     letter-spacing: 1px;
-    color: whitesmoke!important;
+
+}
+
+/* ABOUT PAGE STYLING */
+
+.about-background {
+    background-image: url(../images/Avengers-4-banner-Infinity-War-sequel-black-white.jpg);
+    background-size: auto;
 }
