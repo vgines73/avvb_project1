@@ -41,8 +41,14 @@ Alternatively:
 * Primary Usage: Choose two fighters and compare their power levels to determine who is superior!
 * Seen below -
 
-<!-- Screenshots here. -->
+**Screenshot#1:**
+![screencapture-vgines73-github-io-avvb-project1-2020-11-21-17_06_56 (1)](https://user-images.githubusercontent.com/71681031/99891242-9aa2d080-2c1c-11eb-8a96-252784df8788.png)
 
+**Screenshot#2:**
+![screencapture-vgines73-github-io-avvb-project1-2020-11-21-17_07_38](https://user-images.githubusercontent.com/71681031/99891240-95458600-2c1c-11eb-8fc2-bcbe39a25f11.png)
+
+**Screenshot#3:**
+![screencapture-vgines73-github-io-avvb-project1-fight-html-2020-11-21-17_07_54](https://user-images.githubusercontent.com/71681031/99891280-f8cfb380-2c1c-11eb-8dcc-fc0aebcef4f0.png)
 **Credits** 
 
 * https://superheroapi.com/index.html
@@ -51,4 +57,11 @@ Alternatively:
 
 
 - - -
+**Contact Info:**
+
+Email: vgines73@gmail.com
+
+
+<img src="https://img.shields.io/badge/LICENSE-mit-green">
+
 © 2020 Victor Moscone, Bonnie Lee, & Vincent Gines. All Rights Reserved.
